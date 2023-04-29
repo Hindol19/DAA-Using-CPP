@@ -125,7 +125,7 @@ Graph Prims(Graph G)
         int u = minKey(key, mstSet, G.nov);
         mstSet[u] = 1;
 
-        for (int v = 0; v < G.noe; v++)
+        for (int v = 0; v < G.nov; v++)
         {
             if (G.w[u][v] && mstSet[v] == false && G.w[u][v] < key[v])
             {
@@ -149,6 +149,13 @@ Graph Prims(Graph G)
         MST.e[i - 1].wt = key[i];
     }
 
+    // Finding total cost:
+    int cost = 0;
+    for (int i = 0; i < MST.nov; i++)
+    {
+        cost += key[i];
+    }
+    cout << "Total Cost = " << cost << endl;
     return MST;
 }
 
