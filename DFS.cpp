@@ -7,54 +7,6 @@ int adj[100][100];
 int n;
 int visited[10] = {0};
 
-class Stack
-{
-    int ar[SIZE];
-
-public:
-    int top;
-    Stack()
-    {
-        top = -1;
-    }
-    int isEmpty()
-    {
-        if (top == -1)
-            return 1;
-        else
-            return 0;
-    }
-    void push(int x)
-    {
-        if (top == SIZE - 1)
-            return;
-        top++;
-        ar[top] = x;
-    }
-    void pop()
-    {
-        if (top == -1)
-            return;
-        top--;
-    }
-    int peek()
-    {
-        if (top == -1)
-            return -999;
-        return ar[top];
-    }
-    void display()
-    {
-        if (top == -1)
-            return;
-        for (int i = 0; i <= top; i++)
-        {
-            cout << ar[i] << " ";
-        }
-        cout << endl;
-    }
-};
-
 void readGraph()
 {
     FILE *fp;
