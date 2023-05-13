@@ -17,10 +17,6 @@ void readGraph()
     }
     fclose(fp);
 }
-// int n = 3;
-// int G[3][3] = {{0, 10, 0},
-//                {0, 0, 10},
-//                {0, -30, 0}};
 
 void Relax(int u, int v, int dist[])
 {
